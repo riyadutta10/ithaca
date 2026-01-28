@@ -21,6 +21,9 @@ dummy <- strsplit(EVAP_FNAMES_2000_2019_FULL_RECORD, split = '//')
 dummy <- sapply(dummy, "[[", 1)
 dummy <- strsplit(dummy, split = '_')
 dummy <- sapply(dummy, "[[", 1)
+dummy <- strsplit(dummy, split = '/')
+dummy <- sapply(dummy, "[[", 8)
+
 EVAP_FNAMES_SHORT_2000_2019_FULL_RECORD_ordered_id <- sort(dummy, index.return = T)[[2]]
 
 EVAP_FNAMES_2000_2019_FULL_RECORD <- EVAP_FNAMES_2000_2019_FULL_RECORD[EVAP_FNAMES_SHORT_2000_2019_FULL_RECORD_ordered_id]
